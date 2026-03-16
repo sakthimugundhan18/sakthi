@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Table Padding and Spacing</title> 
+  <style>  
+    table.withSpacing { 
+      border-collapse: separate;  
+      border-spacing: 15px;      
+      width: 60%; 
+      margin: 20px auto; 
+    } 
+ 
+    table.noSpacing { 
+      border-collapse: collapse;  
+      width: 60%; 
+      margin: 20px auto; 
+    } 
+ 
+    th, td { 
+      border: 1px solid black; 
+      padding: 20px;             
+      text-align: center; 
+      background-color: #838fce; 
+    } 
+ 
+    th { 
+      background-color: rgb(86, 214, 11); 
+    } 
+  </style> 
+</head> 
+<body> 
+ 
+  <h2 style="text-align:center;">Table with Border Spacing</h2> 
+  <table class="withSpacing"> 
+    <tr> 
+      <th>Head 1</th> 
+      <th>Head 2</th> 
+    </tr> 
+    <tr> 
+      <td>sakhi</td> 
+      <td>mugundhan</td> 
+    </tr> 
+  </table> 
+ 
+  <h2 style="text-align:center;">Table with Collapsed Borders</h2> 
+  <table class="noSpacing"> 
+    <tr> 
+      <th>Head 1</th> 
+ 
+      <th>Head 2</th> 
+    </tr> 
+    <tr> 
+      <td>sakthi</td> 
+      <td>mugundhan</td> 
+    </tr> 
+  </table> 
+ 
+</body>
