@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h2{
+            background-color: chartreuse;
+            display: inline;
+        }
+        div{
+            border: 1.5px solid red;
+            padding: 10px;
+        }
+        button{
+            background-color: blue;
+            color: aliceblue;
+            border-radius: 8px;
+        }
+        #output{
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>JAVA SCRIPT ARRAY METHODS TASK</h2>
+    <P><strong>OUTPUT:</strong><span id="arrayDisplay"></span></P>
+
+    <button onclick="removelast()">array pop()</button>
+    <button onclick="addToEnd()">array push(apple)</button>
+    <button onclick="removeFirst()">array shift()</button>
+    <button onclick="addToStart()">array unshift('banana')</button>
+    <br>
+    <br>
+
+    <div id="output"></div>
+
+    <SCript>
+        let players = ["virat","hardik","dhoni","rohith"];
+        function updateDisplay(){
+            document.getElementById("arrayDisplay").innerText = players.join("=")
+        }
+
+        function removelast(){
+            let removed = players.pop();
+            document.getElementById("output").innerText = "pop(): removed"+ removed;
+            updateDisplay();
+        }
+
+        function addToEnd(){
+            players.push("jadaja");
+            document.getElementById("output").innerText = "push():added 'jadaja'"
+            updateDisplay();
+        }
+
+        function removeFirst(){
+            let removed = players.shift(); 
+            document.getElementById("output").innerText = "shift(): Removed " + removed; 
+            updateDisplay(); 
+
+        }
+
+        function addToStart(){
+            players.unshift("jadaja"); 
+            document.getElementById("output").innerText = "unshift(): Added 'jadaja'"; 
+            updateDisplay(); 
+
+        }
+    </SCript>
+
+</body>
+</html>
