@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial;
+  cursor: pointer;
+}
+
+/* 1. Basic Hover Color Change */
+.color-box {
+  background-color: #3498db;
+  transition: background-color 0.4s ease;
+}
+.color-box:hover {
+  background-color: #e74c3c;
+}
+
+/* 2. Grow on Hover */
+.grow-box {
+  background-color: #2ecc71;
+  transition: transform 0.3s ease;
+}
+.grow-box:hover {
+  transform: scale(1.2);
+}
+
+/* 3. Color + Size + Shadow */
+.fancy-box {
+  background-color: #9b59b6;
+  transition: all 0.4s ease;
+}
+.fancy-box:hover {
+  background-color: #f1c40f;
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+/* 4. Reveal Content */
+.reveal-box {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal-text {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.reveal-box:hover .reveal-text {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="box color-box">
+  Hover Color
+</div>
+
+<div class="box grow-box">
+  Grow Hover
+</div>
+
+<div class="box fancy-box">
+  Fancy Hover
+</div>
+
+<div class="box reveal-box">
+  <span class="reveal-text">Hello machi</span>
+</div>
+
+</body>
+</html>
