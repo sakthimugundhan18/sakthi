@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods</title>
+</head>
+<body>
+
+<h2>Check Output</h2>
+<pre id="output"></pre>
+
+<script>
+
+let arr = [2, 5, 8, 12, 15];
+
+let doubled = arr.map(num => num * 2);
+
+let evens = arr.filter(num => num % 2 === 0);
+
+let sum = arr.reduce((acc, num) => acc + num, 0);
+
+let firstBig = arr.find(num => num > 10);
+let hasFive = arr.includes(5);
+
+let result = `
+Original: ${arr}
+
+Doubled (map): ${doubled}
+
+Even Numbers (filter): ${evens}
+
+Sum (reduce): ${sum}
+
+First > 10 (find): ${firstBig}
+
+Includes 5?: ${hasFive}
+`;
+
+document.getElementById("output").textContent = result;
+console.log(result);
+
+</script>
+
+</body>
+</html>
