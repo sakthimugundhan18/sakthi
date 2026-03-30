@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events & Async</title>
+</head>
+<body>
+
+<h2>JavaScript Events & Async Demo</h2>
+
+<button id="clickBtn">Click Me</button>
+<p id="clickOutput"></p>
+
+<input type="text" id="inputBox" placeholder="Type something...">
+<p id="liveText"></p>
+
+<form id="myForm">
+  <input type="text" id="name" placeholder="Enter name">
+  <button type="submit">Submit</button>
+</form>
+<p id="formOutput"></p>
+
+<p id="asyncOutput"></p>
+<p id="counter"></p>
+
+<script>
+
+document.getElementById("clickBtn").addEventListener("click", function() {
+  document.getElementById("clickOutput").textContent = "Button clicked";
+});
+
+
+document.getElementById("inputBox").addEventListener("input", function(e) {
+  document.getElementById("liveText").textContent = "Typing: " + e.target.value;
+});
+
+
+document.getElementById("myForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop refresh
+  let name = document.getElementById("name").value;
+  document.getElementById("formOutput").textContent = "Hello " + name ;
+});
+
+
+console.log("1️⃣ Sync Start");
+
+setTimeout(() => {
+  console.log("3️⃣ Async after 2 sec");
+  document.getElementById("asyncOutput").textContent = "Message after 2 seconds ";
+}, 2000);
+
+console.log("2️⃣ Sync End");
+
+
+</script>
+
+</body>
+</html>
