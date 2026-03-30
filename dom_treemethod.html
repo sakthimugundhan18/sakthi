@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nameInput">YOUR NAME</label>
+    <input type="text" id="nameInput" placeholder="TYPE YOUR NAME">
+    <P id=""></P>
+
+    <label for="email">YOUR MAIL ID</label>
+    <input type="email" id="emailInput" placeholder="TYPE YOUR E-MAIL">
+    <P id="clickoutput"></P>
+    
+    <button type="submit" id="clickBtn">SUBMIT</button>
+    <script>
+        const clickBtn = document.getElementById("clickBtn");
+        const clickoutput = document.getElementById("clickoutput");
+
+        clickBtn.addEventListener("click",()=>{
+            clickoutput.textContent= "button was clicked";
+        });
+
+
+
+
+        
+    </script>
+
+
+
+    </form>
+</body>
+</html>
