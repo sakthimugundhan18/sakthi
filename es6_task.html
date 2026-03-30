@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Demo</title>
+</head>
+<body>
+  <h1>Check the console for ES6 output</h1>
+
+  <script>
+
+    const person = {
+      name: "virat",
+      age: 30,
+      hobbies: ["reading", "gaming", "hiking"]
+    };
+
+    const { name, age, hobbies } = person;
+    console.log(`My name is ${name}, I am ${age} years old, and I enjoy ${hobbies.join(", ")}.`);
+
+    function greet(user = "Guest", greeting = "Hello") {
+      console.log(`${greeting}, ${user}!`);
+    }
+
+    greet(); 
+    greet(name, "Hi"); 
+
+    const numbers = [1, 2, 3, 4, 5];
+    const [first, second, ...restNumbers] = numbers;
+    console.log(`First: ${first}, Second: ${second}, Rest: ${restNumbers}`);
+
+    const numbersCopy = [...numbers];
+    console.log("Numbers copy:", numbersCopy);
+
+  </script>
+</body>
+</html>
