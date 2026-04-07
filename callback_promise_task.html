@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback + Promise Example</title>
+</head>
+<body>
+
+    <h2>Callback & Promise Example</h2>
+    <button onclick="startProcess()">Click Me</button>
+
+    <script>
+
+        function myFunction(callback) {
+            console.log("Function started");
+
+            setTimeout(() => {
+                callback("Callback executed!");
+            }, 1000);
+        }
+
+        function myPromiseFunction() {
+            return new Promise((resolve, reject) => {
+
+                let success = true; 
+
+                setTimeout(() => {
+                    if (success) {
+                        resolve("Promise accepted ");
+                    } else {
+                        reject("Promise Rejected ");
+                    }
+                }, 1000);
+
+            });
+        }
+
+        function startProcess() {
+            myFunction(function(message) {
+                console.log(message);
+            });
+
+            myPromiseFunction()
+                .then((result) => {
+                    console.log(result);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+
+        }
+    </script>
+
+</body>
+</html>
